@@ -8,8 +8,7 @@ const io = require("socket.io")(httpServer, {
     }
 });
 
-const PORT = 7000;
-
+const PORT = process.env.PORT || 3000;
 const users = {}; //Một user : socketId
 
 app.get('/', (req, res) => {
